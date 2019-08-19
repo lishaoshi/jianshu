@@ -109,6 +109,7 @@ export const SearchWrapper = styled.div`
         height: 30px;
         border-radius: 15px;
         text-align:center;
+        color: red;
 	}
 	/* .zoom {
 		position: absolute;
