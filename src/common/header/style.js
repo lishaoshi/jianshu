@@ -19,6 +19,7 @@ export const Logo = styled.div`
     height: 56px;
     background: url(${logoPic}) center no-repeat;
     background-size: contain;
+		margin-right: 100px;
 `;
 
 export const Nav = styled.div`
@@ -27,9 +28,12 @@ export const Nav = styled.div`
 	padding-right: 70px;
 	box-sizing: border-box;
     margin: 0 auto; */
-    width: 60%;
+    /* width: 60%; */
+		flex: 1;
+		/* margin-left: 60rpx; */
     height: 100%;
-    margin: 0 auto;
+		padding-left: 60rpx;
+    /* margin: 0 auto; */
     /* background: green; */
     /* padding-right: 70px; */
     /* display:flex; */
@@ -100,17 +104,21 @@ export const Button = styled.div`
 export const SearchWrapper = styled.div`
 	position: relative;
     float: left;
-    .iconfont {
+	.iconfont {
 		position: absolute;
 		right: 5px;
 		bottom: 4px;
-        line-height: 30px;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        text-align:center;
-        color: red;
+		line-height: 30px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		text-align:center;
+		&.focued {
+			background: #777;
+			color: #fff;
+		}
 	}
+	
 	/* .zoom {
 		position: absolute;
 		right: 5px;
@@ -129,9 +137,29 @@ export const SearchWrapper = styled.div`
 export const NavSearch = styled.input.attrs({
 	placeholder: '搜索'
 })`
+	&.slide-enter {
+		/* height: 100px; */
+		width: 160px;
+		transition: width .5s ease-out;
+		/* opacity: 0; */
+		/* transition: opacity 2s ease-out; */
+	}
+	&.slide-enter-active {
+		/* height: 400px; */
+		/* opacity: 1; */
+		width: 240px;
+		
+		/* transition: opacity 2s ease-out; */
+	}
+	&.slide-exit {
+		transition: all .5s ease-out;
+	}
+	&.slide-exit-active {
+		width: 160px;
+	}
 	width: 160px;
 	height: 38px;
-	padding: 0 30px 0 20px;
+	padding: 0 40px 0 20px;
 	margin-top: 9px;
 	margin-left: 20px;
 	box-sizing: border-box;
@@ -141,9 +169,13 @@ export const NavSearch = styled.input.attrs({
 	background: #eee;
 	font-size: 14px;
 	color: #666;
-	/* &::placeholder {
+	&.focued {
+		width: 240px;
+	}
+	&::placeholder {
 		color: #999;
 	}
+	/*
 	&.focused {
 		width: 240px;
 	}
