@@ -10,8 +10,25 @@ const inputBlur = () => {
     type: types.INPUT_BLUR
   }
 }
+const mouseEnter = () => {
+  return {
+    type: types.MOUSE_ENTER
+  }
+}
 
+const mouseLeave = ()=>{
+  return {
+    type: types.MOUSE_LEAVE
+  }
+}
+const changePage = (page) => ({
+	type: types.CHANGE_PAGE,
+	page
+});
 export {
   inputBlur,
-  inputFocus
+  inputFocus,
+  mouseEnter,
+  mouseLeave,
+  changePage
 }
