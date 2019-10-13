@@ -1,3 +1,4 @@
 let a = {
-    a: 'hello'
+    a: 'hello',
+    b: 'hahah '
 }
